@@ -23,4 +23,18 @@ for(let i=0; i<quantidade_pessoas; i++){
 console.log("As pessoas cadastradas foram:");
 console.table(pessoas);
 
+i=0;
+mayor=0
+while(quantidade_pessoas>1){
+    if ((pessoas[i].idade > pessoas[i+1].idade) && (pessoas[mayor].idade < pessoas[i].idade)){   
+        mayor=i;
+    }
+    else if((pessoas[i].idade < pessoas[i+1].idade) && (pessoas[mayor].idade < pessoas[i+1].idade)){
+        mayor=i+1;    
+    }
 
+    quantidade_pessoas--;
+    i++;
+}
+
+console.log(`${pessoas[mayor].nome} ${pessoas[mayor].sobrenome} é a pessoa mais velha de todos os cadastrados`)
