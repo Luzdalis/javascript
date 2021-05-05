@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica Javascript</title>
+    <link  rel ="stylesheet" href ="style.css">
 </head>
 <body>
-    <script src="function.js"></script>
+        <form id="cadastro">
+            <div class="label">
+                <div><label>Nome:</div><input  name="nome" type="text" placeholder="Tiago Santos" required></label>
+            </div> 
+            <div class="label">
+                <div><label>CPF:</label></div><input name="cpf" type="number">
+            </div> 
+            <div class="label">
+                <div><label>E-mail:</label></div><input  name="email" type="text">
+            </div>  
+            <div class="label "><div><label>Idade:</label></div><input name="idade" type="number">
+            </div>
+            <div class="label "><label>Sexo:</label>
+                <select name="sexo">
+                    <option value="" selected></option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+            </div>                  
+            <div><button class="margin" type="submit">Cadrastrar</button></div>
+        </form>
+        <ol id="lista"></ol>
+        <div id="comparar">
+            <p id="comp1"></p>
+            <p id="comp2"></p>
+            <p id="comp3"></p>
+        </div>
+        <!-- <script src="index.js"></script> -->
+        <!-- <script src="function.js"></script> -->
+        <script src="cadastro_DOM.js"></script>
 </body>
 </html>

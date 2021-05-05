@@ -67,6 +67,8 @@ let homem_mulher = (pessoas) => {
     return [homem, mulher];
 }
 
+
+
 resposta = "S";
 while (resposta == "S"){
     pessoas.push(cadastro_de_pessoas());
