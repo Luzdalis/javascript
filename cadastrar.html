@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Javascript</title>
+    <link  rel ="stylesheet" href ="style.css">
+</head>
+<body>
+        <form id="cadastro">
+            <div class="label">
+                <div><label>Nome:</div><input  name="nome" type="text" placeholder="Tiago Santos" required></label>
+            </div> 
+            <div class="label">
+                <div><label>CPF:</label></div><input name="cpf" type="number" required>
+            </div> 
+            <div class="label">
+                <div><label>E-mail:</label></div><input  name="email" type="text" placeholder="SeuEmail@gmail.com" required>
+            </div>  
+            <div class="label"><div><label>Idade:</label></div><input name="idade" type="number" required>
+            </div>
+            <div class="label" required><label>Sexo:</label>
+                <select name="sexo">
+                    <option value="" selected></option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+            </div>                  
+            <div><button class="margin" type="submit">Cadrastrar</button></div>
+        </form>
+        <p id="titulo"></p>
+        <ol id="lista"></ol>
+        <div id="comparar">
+            <p id="comp1"></p>
+            <p id="comp2"></p>
+            <p id="comp3"></p>
+        </div>
+
+        <!-- <script src="index.js"></script> -->
+        <!-- <script src="function.js"></script> -->
+        <script src="cadastro_DOM.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-let pessoas = []
+let pessoas = [];
 let formulario = document.querySelector("#cadastro")
 
 formulario.addEventListener("submit", function (evento) {
@@ -6,14 +6,29 @@ formulario.addEventListener("submit", function (evento) {
 
     let dados = new FormData(formulario);
     let novoCadastro = cadastro_de_pessoas(dados);
-    
+
+    let valor = validarCpf(novoCadastro.cpf);
+    if (valor == true){
+
     pessoas.push(novoCadastro);
     novoItem();
     comparacoes();
 
     alert("Pessoa registrada!")
-
+    }
 })
+
+function validarCpf(cpf){
+
+    let arr = String(cpf);
+    let i=0;
+    while(i < arr.length){
+        console.log(arr[i])
+    valorMultiplicador = 10;
+    i++;
+    }
+}
+
 
 function cadastro_de_pessoas(formData) {
     let nome = formData.get ("nome")
@@ -30,7 +45,7 @@ function cadastro_de_pessoas(formData) {
         sexo
     }
 
-    return (cadastrado);
+    return(cadastrado);
 }
 
 function novoItem(){
@@ -111,7 +126,6 @@ function comparacoes(){
         let [homem, mulher] = homem_mulher(pessoas);
         let paragrafo3 = document.querySelector('#comp3');
         paragrafo3.textContent = `Quantidades de homems cadastrados: ${homem}
-        Quantidades de mulhers cadastradas: ${mulher}`
+        Quantidades de mulhers cadastradas: ${mulher}`;
 
 }
-
